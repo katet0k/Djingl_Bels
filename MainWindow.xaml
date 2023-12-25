@@ -17,8 +17,6 @@
             </Border.Effect>
 
             <Grid>
-                <!-- Перше зображення -->
-                
                 <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\1.png" Width="85" HorizontalAlignment="Left" Margin="38,24,0,725"/>
 
                 <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\2.png" Width="104" HorizontalAlignment="Left" Margin="34,115,0,623"/>
@@ -45,10 +43,14 @@
 
             </Grid>
 
-            <!-- Додайте інші елементи бокової панелі за необхідністю -->
         </Border>
 
-        <!-- Головний вміст вашого вікна -->
         <TextBlock Text="Головний вміст" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DockPanel>
+        Title="MainWindow" WindowState="Maximized">
+    <Grid>
+
+        <Image x:Name="christmasTree" Source="C:\Users\kostu\source\repos\Djingl_Bels\image\thee_body.png" Width="500" Height="700" Margin="10"/>
+        
+    </Grid>
 </Window>
