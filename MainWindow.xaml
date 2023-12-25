@@ -7,50 +7,88 @@
         mc:Ignorable="d"
         Title="MainWindow" WindowState="Maximized" Height="850" Width="1136">
 
-    <DockPanel>
+    <Grid> 
+            <Image x:Name="christmasTree" Source="C:\Users\kostu\source\repos\Djingl_Bels\image\thee_body.png" Width="500" Height="700" Margin="10" Panel.ZIndex="0"/>
 
-        <!-- Бокова панель справа -->
-        <Border DockPanel.Dock="Right" Width="123" Background="#013634">
-            <!-- Вміст бокової панелі -->
-            <Border.Effect>
-                <DropShadowEffect Color="Black" Direction="100" ShadowDepth="1" Opacity="1" BlurRadius="10"/>
-            </Border.Effect>
-
-            <Grid>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\1.png" Width="85" HorizontalAlignment="Left" Margin="38,24,0,725"/>
-
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\2.png" Width="104" HorizontalAlignment="Left" Margin="34,115,0,623"/>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\3.png" Width="114" HorizontalAlignment="Left" Margin="27,196,0,522"/>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\4.png" Width="108" HorizontalAlignment="Left" Margin="38,313,0,428"/>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\5.png" Width="108" HorizontalAlignment="Left" Margin="41,416,0,333" RenderTransformOrigin="0.5,0.5">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-44.096"/>
+            <!-- Бокова панель справа -->
+        <Border DockPanel.Dock="Right" Width="123" Background="#013634" HorizontalAlignment="Right">
+            <!-- Вміст бокової панелі -->  
+                <Grid> 
+                    <Image x:Name="image1" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\1.png" Width="55" HorizontalAlignment="Left" Margin="38,24,0,725"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
                             <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\6.png" Width="112" HorizontalAlignment="Left" Margin="30,500,0,225"/>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\7.png" Width="112" HorizontalAlignment="Left" Margin="28,609,0,116"/>
-                <Image Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\8.png" Width="112" HorizontalAlignment="Left" Margin="28,714,0,11"/>
+                        </Image.RenderTransform>
+                    </Image>
 
+                    <Image x:Name="image2" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\2.png" Width="54" HorizontalAlignment="Left" Margin="34,115,0,623"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
+                    <Image x:Name="image3" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\3.png" Width="54" HorizontalAlignment="Left" Margin="27,196,0,522"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
+                    <Image x:Name="image4" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\4.png" Width="58" HorizontalAlignment="Left" Margin="38,313,0,428"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
+                    <Image x:Name="image5" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\5.png" Width="58" HorizontalAlignment="Left" Margin="41,416,0,333" RenderTransformOrigin="0.5,0.5"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
+                    <Image x:Name="image6" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\6.png" Width="52" HorizontalAlignment="Left" Margin="30,500,0,225"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
-            </Grid>
+                    <Image x:Name="image7" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\7.png" Width="52" HorizontalAlignment="Left" Margin="28,609,0,116"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
 
-        </Border>
+                    <Image x:Name="image8" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\8.png" Width="52" HorizontalAlignment="Left" Margin="28,714,0,11"
+                   MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                   MouseMove="Image_MouseMove"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp" Panel.ZIndex="1">
+                        <Image.RenderTransform>
+                            <TranslateTransform/>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
 
-        <TextBlock Text="Головний вміст" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    </DockPanel>
-        Title="MainWindow" WindowState="Maximized">
-    <Grid>
+            </Border>
 
-        <Image x:Name="christmasTree" Source="C:\Users\kostu\source\repos\Djingl_Bels\image\thee_body.png" Width="500" Height="700" Margin="10"/>
-        
-    </Grid>
+             
+         </Grid>
 </Window>
