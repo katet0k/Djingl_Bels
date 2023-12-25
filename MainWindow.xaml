@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Djingl_Bels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" WindowState="Maximized">
     <Grid>
 
+        <Image x:Name="christmasTree" Source="C:\Users\kostu\source\repos\Djingl_Bels\image\thee_body.png" Width="500" Height="700" Margin="10"/>
+        
     </Grid>
 </Window>
