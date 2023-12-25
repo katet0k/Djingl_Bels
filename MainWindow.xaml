@@ -7,88 +7,98 @@
         mc:Ignorable="d"
         Title="MainWindow" WindowState="Maximized" Height="850" Width="1136">
 
-    <Grid> 
-            <Image x:Name="christmasTree" Source="C:\Users\kostu\source\repos\Djingl_Bels\image\thee_body.png" Width="500" Height="700" Margin="10" Panel.ZIndex="0"/>
+    <Grid>
+        <!-- Додано TextBox для введення коду кольору -->
+        <TextBox x:Name="colorCodeTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="10"
+                 TextChanged="ColorCodeTextBox_TextChanged" />
 
-            <!-- Бокова панель справа -->
+        <!-- Додано Button для зміни кольору вікна -->
+        <Button Content="Змінити кольор вікна" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Background="#013634" Opacity="0.7" Margin="120,10,0,0"
+                Click="ChangeWindowColor_Click"/>
+
+         <Image x:Name="christmasTree" Source="C:\Users\Dasha\source\repos\Djingl_Bels\image\thee_body.png" Margin="195,110,243,-54" Panel.ZIndex="0"/>
+
+        <!-- Бокова панель справа -->
         <Border DockPanel.Dock="Right" Width="123" Background="#013634" HorizontalAlignment="Right">
-            <!-- Вміст бокової панелі -->  
-                <Grid> 
-                    <Image x:Name="image1" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\1.png" Width="55" HorizontalAlignment="Left" Margin="38,24,0,725"
+            <!-- Вміст бокової панелі -->
+            <Grid>
+                <Image x:Name="image1" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\1.png" Width="61" HorizontalAlignment="Left" Margin="33,19,0,721"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image2" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\2.png" Width="54" HorizontalAlignment="Left" Margin="34,115,0,623"
+                <Image x:Name="image2" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\2.png" Width="73" HorizontalAlignment="Center" Margin="0,115,0,619"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image3" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\3.png" Width="54" HorizontalAlignment="Left" Margin="27,196,0,522"
+                <Image x:Name="image3" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\3.png" Width="86" HorizontalAlignment="Left" Margin="20,196,0,514"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image4" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\4.png" Width="58" HorizontalAlignment="Left" Margin="38,313,0,428"
+                <Image x:Name="image4" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\4.png" Width="75" HorizontalAlignment="Left" Margin="26,313,0,421"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image5" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\5.png" Width="58" HorizontalAlignment="Left" Margin="41,416,0,333" RenderTransformOrigin="0.5,0.5"
+                <Image x:Name="image5" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\5.png" Width="66" HorizontalAlignment="Left" Margin="33,416,0,329" RenderTransformOrigin="0.5,0.5"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image6" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\6.png" Width="52" HorizontalAlignment="Left" Margin="30,500,0,225"
+                <Image x:Name="image6" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\6.png" Width="76" HorizontalAlignment="Center" Margin="0,500,0,226"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image7" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\7.png" Width="52" HorizontalAlignment="Left" Margin="28,609,0,116"
+                <Image x:Name="image7" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\7.png" Width="73" HorizontalAlignment="Left" Margin="28,609,0,116"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-                    <Image x:Name="image8" Source="C:\Users\kostu\source\repos\Djingl_Bels\NewFolder\8.png" Width="52" HorizontalAlignment="Left" Margin="28,714,0,11"
+                <Image x:Name="image8" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\8.png" Width="78" HorizontalAlignment="Left" Margin="28,714,0,11"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp" Panel.ZIndex="1">
-                        <Image.RenderTransform>
-                            <TranslateTransform/>
-                        </Image.RenderTransform>
-                    </Image>
-                </Grid>
+                    <Image.RenderTransform>
+                        <TranslateTransform/>
+                    </Image.RenderTransform>
+                </Image>
 
-            </Border>
 
-             
-         </Grid>
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
 </Window>

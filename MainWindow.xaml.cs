@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Djingl_Bels
 {
@@ -11,6 +13,8 @@ namespace Djingl_Bels
         private bool isDragging = false;
         private Point startPosition;
         private Image draggedImage;
+        private bool isCloneCreated = false;
+        private List<Image> clonedImages = new List<Image>();
 
         public MainWindow()
         {
@@ -52,14 +56,35 @@ namespace Djingl_Bels
             {
                 draggedImage.ReleaseMouseCapture();
 
-                // Отримайте координати місця відпускання
-                Point dropPosition = e.GetPosition((Grid)draggedImage.Parent);
+                // Перевірка, чи є клон для поточного зображення
+                if (!isCloneCreated && !clonedImages.Contains(draggedImage))
+                {
+                    // Створіть клон під час відпускання в точці відпускання
+                    Point dropPosition = e.GetPosition((Grid)draggedImage.Parent);
+                    Image newImage = CreateNewImage(draggedImage, dropPosition);
 
-                // Створіть новий об'єкт Image з вказаними координатами
-                Image newImage = CreateNewImage(draggedImage, dropPosition);
+                    clonedImages.Add(newImage);
 
-                // Встановіть новий об'єкт як перетягуваний для можливого подальшого перетягування
-                draggedImage = newImage;
+                    // Встановіть позицію оригінального зображення на його початкову позицію
+                    SetOriginalImagePosition(draggedImage);
+
+                    draggedImage = newImage;
+                    isCloneCreated = true;
+                }
+                else
+                {
+                    isCloneCreated = false;
+                }
+            }
+        }
+
+        private void SetOriginalImagePosition(Image image)
+        {
+            TranslateTransform transform = image.RenderTransform as TranslateTransform;
+            if (transform != null)
+            {
+                transform.X = 0;
+                transform.Y = 0;
             }
         }
 
@@ -83,5 +108,46 @@ namespace Djingl_Bels
 
             return newImage;
         }
+
+        
+
+        // Додано обробник події для кнопки
+        private void ColorCodeTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Перевірка чи введений текст може бути розпізнаний як колір
+            if (IsValidColorCode(colorCodeTextBox.Text))
+            {
+                // Змінення кольору вікна
+                Color newColor = (Color)ColorConverter.ConvertFromString(colorCodeTextBox.Text);
+                this.Background = new SolidColorBrush(newColor);
+            }
+        }
+
+        // Додано обробник події для кнопки
+        private void ChangeWindowColor_Click(object sender, RoutedEventArgs e)
+        {
+            // Отримання кольору з TextBox і зміна кольору вікна
+            if (IsValidColorCode(colorCodeTextBox.Text))
+            {
+                Color newColor = (Color)ColorConverter.ConvertFromString(colorCodeTextBox.Text);
+                this.Background = new SolidColorBrush(newColor);
+            }
+        }
+
+        // Валідація коду кольору
+        private bool IsValidColorCode(string colorCode)
+        {
+            try
+            {
+                ColorConverter.ConvertFromString(colorCode);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+        
     }
 }
