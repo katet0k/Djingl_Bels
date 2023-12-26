@@ -7,16 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" WindowState="Maximized" Height="850" Width="1136">
 
-    <Grid>
+    <Grid x:Name="mainGrid">
         <!-- Додано TextBox для введення коду кольору -->
         <TextBox x:Name="colorCodeTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="10"
                  TextChanged="ColorCodeTextBox_TextChanged" />
 
         <!-- Додано Button для зміни кольору вікна -->
-        <Button Content="Змінити кольор вікна" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Background="#013634" Opacity="0.7" Margin="120,10,0,0"
+        <Button Content="Змінити кольор вікна" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Background="#013634" Margin="120,10,0,0"
                 Click="ChangeWindowColor_Click"/>
-
-         <Image x:Name="christmasTree" Source="C:\Users\Dasha\source\repos\Djingl_Bels\image\thee_body.png" Margin="195,110,243,-54" Panel.ZIndex="0"/>
+        <Button Content="Знімок екрана" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Width="150" Background="#013634" Height="30" Margin="1063,752,0,0"
+        Click="CaptureScreenshot_Click"/>
+        <Button Content="Очистити поле" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Width="150" Height="30" Background="#013634" Margin="14,763,0,0"
+        Click="ClearField_Click"/>
+        <Image x:Name="christmasTree" Source="C:\Users\Dasha\source\repos\Djingl_Bels\image\thee_body.png" Margin="195,110,243,-30" Panel.ZIndex="0"/>
 
         <!-- Бокова панель справа -->
         <Border DockPanel.Dock="Right" Width="123" Background="#013634" HorizontalAlignment="Right">
@@ -58,7 +61,7 @@
                     </Image.RenderTransform>
                 </Image>
 
-                <Image x:Name="image5" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\5.png" Width="66" HorizontalAlignment="Left" Margin="33,416,0,329" RenderTransformOrigin="0.5,0.5"
+                <Image x:Name="image5" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\10.png" Width="130" HorizontalAlignment="Left" Margin="4,385,0,296" RenderTransformOrigin="0.5,0.5"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
@@ -67,7 +70,7 @@
                     </Image.RenderTransform>
                 </Image>
 
-                <Image x:Name="image6" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\6.png" Width="76" HorizontalAlignment="Center" Margin="0,500,0,226"
+                <Image x:Name="image6" Source="C:\Users\Dasha\source\repos\Djingl_Bels\NewFolder\6.png" Width="76" HorizontalAlignment="Center" Margin="0,507,0,219"
                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
                    MouseMove="Image_MouseMove"
                    MouseLeftButtonUp="Image_MouseLeftButtonUp">
